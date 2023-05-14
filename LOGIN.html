@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+            @font-face {
+    font-family: 'oxaniumbold';
+    src: url('oxanium-bold.woff2') format('woff2'),
+        url('oxanium-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+        *{
+            margin: 0px;
+            font-family: 'oxaniumbold';
+        }
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Split into two equal columns */
+            font-family: 'oxaniumbold' !important;
+        }
+        html{
+            overflow: hidden;
+        }
+        .div1{
+            background-color: #2D5ABF;
+            height: 100vh;
+        }
+        .div1 img{
+            position: absolute;
+            height: 60.9087%;
+            width: 42.41735%;
+            left: 1.86515%;
+            top: 28.6587%;
+            border-radius: 0px;
+        }
+        .div2{
+            position: relative;
+            top: 17%;
+            text-align: center;
+            height: 100vh;
+        }
+        .div2 img{
+            position: relative;
+            
+        }
+        p{
+            font-family: 'oxaniumbold' !important;
+
+            color: #6DAFA7;
+            font-style:  italic;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 48px;
+            text-transform: uppercase;
+            cursor: default;
+        }
+        .email{
+            font-family: 'oxaniumbold' !important;
+
+            background: #D9D9D9;
+            height: 44.22px;
+            width: 45.79%;
+            border: transparent;
+            border-radius: 8px;
+            position: relative;
+            /*left: 20.64%;*/
+            
+            padding-left: 10px;
+
+            font-family: 'Inter';
+            
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            
+
+            
+            
+        }
+        .password{
+            font-family: 'oxaniumbold' !important;
+
+            background: #D9D9D9;
+            height: 44.22px;
+            width: 45.79%;
+            border-radius: 8px;
+            border: transparent;
+            position: relative;
+            /*left: 20.64%;*/
+            padding-left: 10px;
+
+            font-family: 'Inter';
+            
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            
+
+            
+        }
+        .checkbox{
+            font-family: 'oxaniumbold' !important;
+
+            position: relative;
+            right: 8%;
+            top: 1.5%;
+            height: 15px;
+            width: 15px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            cursor: pointer;
+        }
+        .check{
+            position: relative;
+            right: 8%;
+            top: 1.5%;
+
+            font-family: 'Inter';
+            
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: capitalize;
+
+            color: #000000;
+        }
+        a{
+            position: relative;
+            top: 1.5%;
+            left: 9%;
+
+            font-family: 'Inter';
+            
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            text-transform: capitalize;
+
+            color: #2D5ABF;
+            text-decoration: none;
+        }
+        .login{
+            background-color: #2D5ABF;
+            color: white;
+            position: relative;
+            top: 10%;
+            height: 44.22px;
+            width: 45.79%;
+            border-radius: 8px; 
+            border: transparent;
+
+            font-family: 'Inter';
+        
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            cursor: pointer;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img style="max-width: fit-content;" src="Rectangle 39.png" >
+    </div>
+    <div class="div2">
+        <img style="max-width:150px" src="Web capture_13-5-2023_03853_www.univ-blida.dz.jpeg" >
+        <p>LRDSI</p><br>
+        <input type="email" placeholder="Email" class="email" required><br><br>
+        <input type="password" placeholder="Password" class="password" required><br>
+        <input class="checkbox" type="checkbox"> <label for="" class="check">Reminds Me</label>
+        <a href="#" >Password Recovery</a><br><br>
+        <input type="submit" value="LOG IN" class="login">
+    </div>
+</body>
+</html>
