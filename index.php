@@ -1,4 +1,7 @@
+<?php
+session_start();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +19,8 @@
 <body>
 
 
-    <div class="link"><img style="max-width: 15px;" src="🦆 icon _hamburger menu_.png"></i></div>
-    <div class="container">
+   
+    <div id="acl" class="container">
 
 
         <div class="item1">
@@ -34,8 +37,13 @@
             <div class="itemb4"><img style="max-width: 30px; visibility:hidden" src="🦆 icon _globe alt_.png" alt=""></div>
             <div class="itemb5">
                 <hr>
-                <h1 style="margin-left: 19px;">Laboratoire de Recherche <span style="font-size:25px;opacity:0.7" id="element"></span></span>
-                </h1>
+                <script>var viewportWidth = window.innerWidth;
+
+                if (viewportWidth < 656) {
+    document.write('<h1 style="margin-left: 19px;">Laboratoire de Recherche<hr> <span style="opacity: 0.6;" id="element"></span></h1>');
+} else {
+    document.write('<h1 style="margin-left: 19px;">Laboratoire de Recherche <span style="opacity: 0.6;" id="element"></span></h1>');
+}</script>
                 <hr>
                 <h1 style="margin-left: 19px;">Faculté des Sciences | Université Saad Dahlab - Blida 1
                 </h1>
@@ -50,7 +58,13 @@
             <div class="su">
                 <h1 style="
                 font-weight:400;font-size:70px;text-transform:capitalize;font-family:Arial, Helvetica, sans-serif;color:#000;
-width:1000px;display:block; white-space:normal !important;">Introducing LRDSI</h1>
+width:1000px;display:block; white-space:normal !important;">   <script>var viewportWidth = window.innerWidth;
+
+if (viewportWidth < 656) {
+document.write('Introducing <br> LRDSI');
+} else {
+document.write('Introducing LRDSI');
+}</script></h1>
 
 
 
@@ -60,12 +74,15 @@ width:1000px;display:block; white-space:normal !important;">Introducing LRDSI</h
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <div  class="social-links">
-                        <a style="width:200px" class="social-btn" href="#">
+                    
+                        </a>  <a style="width:200px" class="social-btn" href="#">
                            <span>Get Started</span>
                         </a>
+                      <br>
                         <a style="width:200px;background:#f4f4f4;color:#000" class="social-btn" href="LOGIN.html">
                             <span>Learn more</span>
                         </a>
+
                      
                     </div>
 
@@ -84,49 +101,39 @@ width:1000px;display:block; white-space:normal !important;">Introducing LRDSI</h
     </div>
     <div class="navigation">
     <ul>
-      <li>
+      <li id="home" onclick="togglehome()">
         <a href="#">
           <span class="icon"><i class="fa-solid fa-house"></i></span>
           <span class="title">Home</span>
         </a>
       </li>
-      <!-- <li>
-                <a href="#">
-                    <span class="icon"></span>
-                    <span class="icon">Home</span>
-                </a>
-            </li> -->
-      <li>
+  
+      <li onclick="login()">
         <a href="#">
           <span class="icon"><i class="fa-solid fa-user"></i></span>
           <span class="title">Profile</span>
         </a>
       </li>
-      <li>
+      <li onclick="toggleinfoMessages()">
         <a href="#">
           <span class="icon"><i class="fa-solid fa-message"></i></span>
           <span class="title">Messages</span>
         </a>
       </li>
-      <li>
+      <li id="infoUsdb" onclick="toggleinfoUsdb()">
         <a href="#">
-          <span class="icon"><i class="fa-solid fa-circle-info"></i></span>
-          <span class="title">Help</span>
+          <span class="icon"><i  class="fa-solid fa-circle-info"></i></span>
+          <span class="title">USDB</span>
         </a>
       </li>
-      <li>
+      <li id="infoLrdsi" onclick="toggleinfoLrdsi()">
         <a href="#">
-          <span class="icon"><i class="fa-solid fa-gear"></i></span>
-          <span class="title">Settings</span>
+          <span class="icon"><i  class="fa-solid fa-circle-info"></i></span>
+          <span class="title">LRDSI</span>
         </a>
       </li>
-      <li>
-        <a href="#">
-          <span class="icon"><i class="fa-solid fa-lock"></i></span>
-          <span class="title">Password</span>
-        </a>
-      </li>
-      <li>
+     
+      <li onclick="signout()">
         <a href="#">
           <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
           <span class="title">SignOut</span>
@@ -137,12 +144,83 @@ width:1000px;display:block; white-space:normal !important;">Introducing LRDSI</h
 
   <div class="toggle" onclick="toggleMenu()"></div>
   <script type="text/javascript">
+  function signout(){
+    window.location.href = 'deconnexion.php';
+  }
+function login(){
+  window.location.href = 'LOGINN.php';
+}
+  function toggleinfoUsdb(){
+    let html=document.querySelector('html');
+    let body = document.querySelector('.body');
+  
+    body.classList.toggle('active');
+    let body2 = document.querySelector('.body.Lrdsi');
+    let navigation = document.querySelector('.navigation');
+    navigation.classList.remove('active');
+    body2.classList.remove('active');
+    let toggle = document.querySelector('.toggle');
+      
+   
+      toggle.classList.remove('active');
+  
+  }
+  function toggleinfoLrdsi(){
+    let html=document.querySelector('html');
+    let body2 = document.querySelector('.body.Lrdsi');
+   
+    body2.classList.toggle('active');
+    let body = document.querySelector('.body');
+    let navigation = document.querySelector('.navigation');
+    navigation.classList.remove('active');
+    body.classList.remove('active');
+    let toggle = document.querySelector('.toggle');
+      
+   
+      toggle.classList.remove('active');
+  }
+  
+  function togglehome(){
+    let body = document.querySelector('.body');
+    let body2 = document.querySelector('.body.Lrdsi');
+    let home = document.querySelector('#home');
+    body.classList.remove('active');
+    body2.classList.remove('active');
+    let navigation = document.querySelector('.navigation');
+    navigation.classList.remove('active');
+    let toggle = document.querySelector('.toggle');
+      
+   
+      toggle.classList.remove('active');
+  
+      
+  }
     function toggleMenu() {
       let navigation = document.querySelector('.navigation');
       let toggle = document.querySelector('.toggle');
+      
+      let itemb2 = document.querySelector('.itemb2');
       navigation.classList.toggle('active');
       toggle.classList.toggle('active');
+      itemb2.classList.toggle('active');
     }
+    function  toggleinfoMessages(){
+      let msg =document.querySelector('.messages')
+    let body = document.querySelector('.body');
+    let info = document.querySelector('#infoUsdb');
+    msg.classList.toggle('active');
+    let body2 = document.querySelector('.body.Lrdsi');
+    let navigation = document.querySelector('.navigation');
+    navigation.classList.remove('active');
+    body2.classList.remove('active');
+    body.classList.remove('active');
+    let toggle = document.querySelector('.toggle');
+      
+   
+      toggle.classList.remove('active');
+  
+  }
+   
   </script>
 
 
@@ -169,99 +247,124 @@ width:1000px;display:block; white-space:normal !important;">Introducing LRDSI</h
     <div class="the-hole-seconde-section">
     <div class="background"></div>
     <div class="body">
+   
+
     <section >
-  <div style="margin-left: 25px;" class="right">
-    <div class="head"><h1>the best unv <br> in the world<span>L</span> trust me bro</h1></div>
-    <p><span></span> we get outof bounderies <span></span>just to explain more our situation</p>
+  <div style="margin-left: 25px;;margin-top:30px" class="right">
+  <div  class="head"><h1 style="line-height: 30px;font-size:20px">Saad Dahlab University Blida 1 (Université Saad Dahlab Blida 1) .<br> </h1></div>
+    <p> you cen viqit the university page to learn more </p>
   <div class="btns">
     <a href="https://www.univ-blida.dz/"><button class="brutal">visit us</button></a>
    <a href="#contact"> <button>#contact us ☞</button></a>
    </div>
   </div>
   <div class="left">
-    <img src="IMG_20210107_075855.jpg">
+    <img style="max-height:750px ;" src="346096998_756007689652101_8999744449722457714_n.jpg">
   </div>
 </section></div>
-<div class="pricing">
-    <div class="seconde-section pd-y" id="sec">
-        <h2 class ="seconde-section-title hide-fade">nous actual</h2>
-        <span class="line"></span>
-        <div class="skils">
-            <div class="skil layerf hide-fade"><img class="img" src="gradution-diploma-toga-hat-400x250.jpg" alt="1tear"></i><h2 class="skil-title"></h2><p class="skil-desc"></p></div><div class="center-skil hide-fade"><div class="skil  layerf"><img class="img" src="Photo-1_Conference-Hydrogene-vert-400x250.jpg" alt="2tear"><h2 class="skil-title"></h2><p class="skil-desc"></p></div></div><div class="skil hide-fade layerf"><img class="img" src="recrutement-e1643036135219-400x250.png" alt="3tear"><h2 class="skil-title"></h2><p class="skil-desc"></p></div>
-            <div class="clear"></div>
-            
-    </div></div>
 
-  </div></div>
-    <div class="main">
-    <div class="body">
-    <section style="  background-color: hsl(212, 33%, 89%)
-"><div class="img1">
-
-        <div class=" left " >
-          <img src="IMG_20210107_075855.jpg">
-        </div>
-        </div>
-  <div class="right">
-    <p><span></span> we get outof bounderies <span></span></p>
+<div   class="body Lrdsi">
+    <section >
+  <div style="margin-left: 25px;margin-top:30px" class="right">
+  <div  ><div style="line-height: 30px;font-size:20px;color:white;max-width:400px;    white-space: pre-line;">Le laboratoire de Recherche pour le Développement des Systèmes Informatisés 
+  (LRDSI) de l’université Saad Dahlab –Blida1, a été agréé en mai 2002 pour accompagner
+   le département d’informatique créé en 1999, dans ses activités pédagogiques et scientifiques.
+    Il est composé de quatre équipes regroupant plus de 30 enseignants chercheurs et 32 doctorants (LMD et classique).  
+    </div>
+    </div>
+    <p> you cen viqit the university page to learn more </p>
   <div class="btns">
-    <button class="brutal">help us</button>
-    <button>#bruttobrutto ☞</button>
+    <a href="https://www.univ-blida.dz/"><button class="brutal">visit us</button></a>
+   <a href="#contact"> <button>#contact us ☞</button></a>
    </div>
   </div>
+  <div class="left">
+    <img style="max-height:750px ;" src="Web capture_13-5-2023_03853_www.univ-blida.dz.png">
+  </div>
 </section></div>
+<div class="thed pd-y" style="background-color: white;" id="f">
+    <div id="projects"class="projects-title hide-fade"><h2>news</h2></div>
+   <div class="skils" >
+    <div class="skil hide-fade layerf"><a style="z-index: 10000;color:white" href="#">read more</a><img class="img" src="img/Capture d’écran 2022-09-18 191946.png" alt="1stproject"></div><div class="skil hide-fade  layerf"><a style="z-index: 10000;color:white" href="#">read more</a><img class="img" src="img/Web 1920a – 1.jpg" alt="1stproject"></div><div class="skil hide-fade layerf"><a style="z-index: 10000;color:white" href="#">read more</a></div>
+        
+        
+    </div>
+   
+</div></div>
+    
+
+  
 <div id="contact" class="contact">
-<form class="my-form">
+<form class="my-form" action="index.php" method="post">
   <div class="container">
     
     <ul>
-      <li>
-        <select>
-          <option selected disabled>-- Please choose an option --</option>
-          <option>Request Quote</option>
-          <option>Send Resume</option>
-          <option>Other</option>      
-        </select>
-      </li>
+ 
       <li>
         <div class="grid grid-2">
-          <input type="text" placeholder="Name" required>  
+          <input type="text" placeholder="Name" name="name" required>  
         </div>
       </li>
       <li>
         <div class="grid grid-2">
-          <input type="email" placeholder="Email" required>  
+          <input type="email" placeholder="Email" name="email" required>  
         </div>
       </li>    
       <li>
-        <textarea placeholder="Message"></textarea>
+        <textarea placeholder="Message" name="text" required minlength="15"></textarea>
       </li>   
       <li>
         <input type="checkbox" id="terms">
-        <label for="terms">I have read and agreed with <a href="">the terms and conditions.</a></label>
+        
+
+               
+ <label for="terms">I have read and agreed with  <script>viewportWidth 
+ if(viewportWidth <500){
+  document.write('<br> <hr>');
+ }  </script> <a href="">the terms and conditions.</a>
+
+        </label>
       </li>  
       <li>
         <div class="grid grid-3">
           <div class="required-msg">REQUIRED FIELDS</div>
-          <button class="btn-grid" type="submit" disabled>
-            <span class="back">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
-            </span>
-            <span class="front">SUBMIT</span>
-          </button>
-          <button class="btn-grid" type="reset" disabled>
-            <span class="back">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
-            </span>
-            <span class="front">RESET</span>
-          </button> 
+       
+  
+    <button class="btn-grid" type="submit" disabled>
+      <span class="back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+      </span>
+      <span class="front">Envoyer</span>
+    </button>
+
+    <button class="btn-grid" type="reset" disabled>
+      <span class="back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+      </span>
+      <span class="front">Annuler</span>
+    </button  >
         </div>
       </li>    
     </ul>
   </div>
 </form>
 </div>
+<div class="messages">
 
+
+
+
+
+
+<?php
+include("MSG.php");
+
+?>
+
+
+</div>
+
+<footer style="text-align: center;white-space:pre-line;max-width: 375px;margin-top: 0;margin-bottom:0;margin-right:auto;margin-left:auto"><tt><b> Privesy | Terms of use | Copyrights &copy; <span class="year"></span> LRDSI. all rights reserved</b></tt></footer>
 
 </body>
 
@@ -269,6 +372,21 @@ width:1000px;display:block; white-space:normal !important;">Introducing LRDSI</h
 
 
 <script type="text/javascript">
+const observer= new IntersectionObserver((entries)=>{
+entries.forEach((entry)=>{
+   
+    if(entry.isIntersecting){
+        entry.target.classList.add("show-fade");
+    }else{
+        entry.target.classList.remove("show-fade");
+    }
+});
+});
+const hidinElements=document.querySelectorAll(".hide-fade");
+hidinElements.forEach((el)=> observer.observe(el));
+const year=document.querySelector(".year");
+
+year.innerHTML=new Date().getFullYear();
     const checkbox = document.querySelector('.my-form input[type="checkbox"]');
 const btns = document.querySelectorAll(".my-form button");
 
@@ -327,7 +445,18 @@ for (var i = 0; i < num_rows; i++) {
 
 }
 
-
+.hide-fade{
+    opacity: 0;
+    transition: all 0.5s;
+    filter: blur(5px);
+    
+    transform: translateX(-30%);
+}
+.show-fade{
+    opacity: 1 !important;
+    filter: blur(0);
+    transform: translateX(0%);
+}
 
 .itemb2 {
     text-align: center;
@@ -432,6 +561,9 @@ body{
     background-color: #f4f4f4;
     transition: color 1s ease-in-out;
 }
+html,body{
+  overflow-x: hidden;
+}
 
 html {
     margin: 0;
@@ -468,7 +600,10 @@ body {
     background-color: #fff;
     white-space: nowrap;
 }
-
+html{
+  width: 100vw;
+  
+}
 .container {
     width: 100vw;
     height: 100vh;
@@ -625,32 +760,12 @@ border: #0aaf60 solid 2px;
     border-radius: 10px;
 }
 
-.seconde-section{
-    text-align: center;
-    
-}
-.pricing .skil{
-    height: 600px !important;
-    margin-bottom: 20px;;
-}
-.seconde-section-title{
-    font-size: 35px;
-    text-transform:capitalize;
-    margin-bottom: 6px;
-    font-family: 'Lato', sans-serif;
-}
-.seconde-section .line{
-    display: block;
-    width:60px;
-    height:5px;
-    background-color: #6195ff;
-    margin:0 auto 70px auto;
-}
+
+
 
 .skils{
-    margin-left:auto;
-    margin-right: auto;
-    width:75vw;
+  
+    width:100vw;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -665,7 +780,7 @@ border: #0aaf60 solid 2px;
 .skil{
     
     height:200px;
-
+margin: 20px;
     border:5px solid black;
     font-family: ' roboto mono' , monospace;
     flex-basis: 300px;
@@ -700,6 +815,43 @@ border: #0aaf60 solid 2px;
     transition: color 0.5s;
     
 }
+.projects-title h2{
+    font-size:50px;
+    text-align: center;
+     font-family: 'oxaniumbold'; 
+    margin-bottom: 70px;
+}
+.thed{
+    background-color: hsl(0, 2%, 78%);
+    position: relative;
+
+}
+.thed .skil{
+    margin-bottom: 40px;
+    width:30%;
+    height:400px !important;
+    
+    
+}
+
+.thed .skil a{
+    top:80%;
+    left:30%;
+    text-decoration: none;
+    color:#000;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+   font-size: 20px;
+    
+    
+    transition: opacity 0.5s,visibility 0.5s,top 0.5s;
+    
+}
+.thed .skil:hover  a{
+    opacity: 1;visibility: visible;top:50%;
+}
 .layerf{
     position: relative;
 }
@@ -713,13 +865,7 @@ border: #0aaf60 solid 2px;
     z-index: -1;
     
 }
-.seconde-section .layerf:after{
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transition: width 0.5s,height 0.5s;
-    
-}.thed .layerf:after{
+.thed .layerf:after{
     top:0;left: 0;
     width: 100%;
     position: absolute;
@@ -787,8 +933,7 @@ footer .social-btn {
     vertical-align:middle ;
     text-align: center;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+   
     background:#0aaf60;
     margin: 10px;
     border-top-left-radius: 20px;
@@ -888,14 +1033,15 @@ footer .social-btn span {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-
+.right{
+  padding: 90px;
+}
  .body {
 	 font-family: sans-serif;
 	 background-color: #fed4fd;
 }
  .body section {
-	 padding: 1.5rem;
-	 width: 100%;
+	 width: 100vw;
 	 max-height: 100vh;
 	 min-height: 100vh;
 	 display: flex;
@@ -913,7 +1059,7 @@ footer .social-btn span {
 	 font-size: 16px;
 }
  .body section .right h1 span {
-	 writing-mode: vertical-rl;
+	
 	 line-height: 0.89;
 }
  @media (max-width: 600px) {
@@ -978,7 +1124,7 @@ footer .social-btn span {
 	 width: 80%;
 	 height: 100%;
 	 border: 6px solid;
-	 box-shadow: 12px 10px 0 black;
+	
 }
 .img1{
     width: 1000px;
@@ -988,7 +1134,7 @@ footer .social-btn span {
 	 width: 100% !important;
 	 height: 100% !important;
 	 border: 6px solid;
-	 box-shadow: 12px 10px 0 black;
+	 
 }
 
  .body section .left img:hover {
@@ -1026,15 +1172,7 @@ footer .social-btn span {
 		 filter: grayscale(100%) invert(70%) saturate(80%);
 	}
 }
-.seconde-section{
- 
 
-padding:80px;
-padding-bottom: 150px !important;
-margin-bottom: 40px;
-
-  
-}
 .img{
     
     max-width: 600px;
@@ -1045,21 +1183,7 @@ margin-bottom: 40px;
     width: 100%;
    
 }
-.pricing .skil .pixle-character{
-    position: absolute;
-   transform: translate(40%,-35%);
-   
-    max-width: 120px;
-}
-.pricing .center-skil .pixle-character{
-    position: absolute;
-  animation-duration:4s ;
-   animation-name: wonderfull;
-   animation-iteration-count: infinite;
-   animation-timing-function: linear;
-   
-   transform: scale(200%) translate(50%,-10%);
-}
+
 @keyframes wonderfull{
     from { margin-top: 0; }
     50%  { margin-top: -10px;  } /* ignorée */
@@ -1112,9 +1236,7 @@ select::-ms-expand {
   display: none;
 }
 
-/*Remove dotted outline from selected option on Firefox*/
-/*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
-/*We use !important to override the color set for the select on line 99*/
+
 select:-moz-focusring {
   color: transparent !important;
   text-shadow: 0 0 0 var(--white);
@@ -1146,8 +1268,7 @@ select:-moz-focusring {
     left: 0;
     top: 20%;
 }
-/* FORM ELEMENTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .my-form h1 {
   margin-bottom: 1.5rem;
 }
@@ -1409,6 +1530,8 @@ select:-moz-focusring {
   position: relative;
   display: block;
   min-width: 60px;
+  margin: 0;
+  padding-right: 0;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -1439,6 +1562,7 @@ select:-moz-focusring {
   background: #074848;
   cursor: pointer;
   transition: 0.7s;
+  z-index: 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 }
 
 .toggle.active {
@@ -1481,19 +1605,21 @@ select:-moz-focusring {
 
   }
   @media (max-width: 1043px) {
+
   .itemb5 h1,.itemb5 span{
     font-size: 15px !important;
   }
   .imgg{
-    top:400px !important;
-    max-width: 50% !important;
+    max-width: 50% !important;z-index: -1000000000;
   }
 }
   @media (max-width: 773px) {
-  
+  .left {
+  max-width: 350px;
+}
   .imgg{
-    top:500px !important;
-    max-width: 60% !important;
+    top:300 !important;
+    
   }
   .itemb5 h1,.itemb5 span{
     font-size: 10px !important;
@@ -1504,19 +1630,148 @@ select:-moz-focusring {
     font-size: 40px !important;
   }
   .imgg{
-    top:500px !important;
-    max-width: 60% !important;
+    max-width: 350px !important;
+    opacity: 0.3;
+
   }
   .itemb5 h1,.itemb5 span{
     font-size: 10px !important;
   }
-
-
+.su{
+  margin: 0 !important;
+}
+.social-links{
+  margin-top: 40px;
+}
 
   }
   html{
-    overflow-x: hidden;
+   height: 100%;
   }
+  @media (max-width: 546px) {
+  input,select,textarea{
+    width: 50% !important;
+  }
+  .itemb2{
+    visibility: hidden;
+    position: absolute;
+    top:600px;
+  }
+  
+}
+@media (max-width: 467px){
+  .item1,.itemb5,h1,body{
+  padding: 0 !important; 
+  margin: 0 !important;
+}
 
+
+  
+}
+@media (max-width: 376px){
+  .item2,.right,.head{
+  padding: 0;
+  margin-left: 0 !important;
+}
+.right,.head{
+  font-size: 12px !important;
+}
+
+
+
+  
+}
+
+section{
+  max-width: 100vw;
+  
+}
+.projects-title{
+    font-size:30px;
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 70px;
+}
+.body,.messages{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0 ;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+
+}
+.messages{
+  left: 4% !important;
+  
  
+}
+
+.body.active,.messages.active{
+  width: 100vw !important;
+  visibility: visible;
+  opacity: 1;
+  
+}
+.messages{
+  top: 20px !important;
+  background-color: white;
+  height: 100vh;
+  
+  
+}
+.body.Lrdsi{
+  background-color: #5d92fe;
+}
+form button{
+  width: 100px !important;
+}
+HTML CSSResult Skip Results Iframe
+
+.bstext{color:#FFF;margin-bottom:15px;border-radius:3px;padding:10px}
+
+.bserror{background-color: #efffff;}
+.headertext{font-size:16px;background-color:rgba(0,0,0,0.30);padding:8px 10px;margin:-10px;margin-bottom:10px}
+.headertext > .fa{margin-right:5px}
+.bloggerspice {overflow: hidden;}
+
+
+
+
+.imgg {
+  perspective: 1000px; /* Set the perspective for 3D effect */
+  transition: transform 0.5s; /* Add transition for smooth animation */
+}
+
+.imgg:hover {
+  transform: rotateY(-45deg); /* Rotate the image on hover */
+}
 </style>
+
+<?php
+
+include("database.php");
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["text"])) {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $text = $_POST["text"];
+
+        $sql = "INSERT INTO `MSG` (`name`, `email`, `text`) VALUES ('$name', '$email', '$text')";
+        if (!mysqli_query($conn, $sql)) {
+            
+        
+            echo "Error inserting data: " . mysqli_error($conn);
+        
+
+        }
+    } else {
+        echo "Invalid data submitted.";
+    }
+  
+}
+mysqli_close($conn);
+
+?>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SingIn</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .split-screen{
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 860px){
+            .split-screen{
+                flex-direction: row;
+            }
+        }
+        .split-screen div{
+            flex: 1;
+            height: 100vh;
+        }
+        .div1{
+            height: 100vh;
+            background: linear-gradient(180deg,#f5f5f5,#d0e1e0,#8fbfb7) 
+                   
+        }
+        
+        .img1{
+            position: absolute;
+            height: 268.93 px;
+            width: 515.45 px;
+            left: 160px;
+            top: 210px;
+            border-radius: 0px;
+        }
+        .img2{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 795px;
+            top: 335px;
+        }
+        .btn1{
+            background-color: transparent;
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 259px;
+            height: 70px;
+            left: 260px;
+            top: 531px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.275em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+            cursor: pointer;
+            border: 2px solid #FCFCFC;
+        }
+        .div2{
+            text-align: center;
+            height: 100vh;
+            background-color: #8fbfb7;
+        }
+        .p1{
+            position: relative;
+            top: 250px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.345em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+
+        }
+        .p2{
+            position: relative;
+            top: 250px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 77px;
+            letter-spacing: 0.275em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+
+        }
+        .p3{
+            position: relative;
+            top: 250px;
+            left: 210px;
+            width: 414px;
+            
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.345em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+        }
+        .btn2{
+            background-color: transparent;
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 259px;
+            height: 70px;
+            left: 1147px;
+            top: 531px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.275em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+            cursor: pointer;
+            border: 2px solid #FCFCFC;
+        }
+        button:hover{
+            background-color: #FCFCFC;
+            color: #8fbfb7;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="split-screen">
+        <div class="div1">
+            <i class="fa-regular fa-chevron-left fa-sm" style="color: #8fbfb7;"></i>
+            <img class="img1" src="Rectangle 50.png">
+            <img class="img2" src="téléchargement.png">
+            <button class="btn1">Continue As A Viewer</button>
+            <!-- <input type="submit" value="Continue Ass a Viewer" class="btn1"> -->
+        </div>
+        <div class="div2">
+            <p class="p1">use as admin</p>
+            <p class="p2">ADMIN</p>
+            <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, explicabo quibusdam recusandae assumenda similique numquam delectus adipisci quisquam cum officia alias natus cupiditate, veniam sit nemo vero asperiores at iste.</p>
+            <button class="btn2">SING IN</button>
+        </div>
+    </div>
+</body>
+</html>
