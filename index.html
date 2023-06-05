@@ -2337,6 +2337,7 @@ footer{
 <script type="text/javascript">
 (function(){
    function onReady() {
+     setTimeout(function() {
        let navigation=document.querySelector(".navigation");
        navigation.classList.remove("unvisibale");
        let cin =document.querySelector(".cin")
@@ -2348,7 +2349,7 @@ footer{
       let cin_container =document.querySelector(".cin-container")
       cin_container.classList.add("unvisibale");
 
-    
+     }, 4000); 
    }
    
    if ( document.readyState === 'complete' ) {
@@ -2362,7 +2363,7 @@ setInterval(()=>{
   const comp =getComputedStyle(progress_bar);
   const width =parseFloat(comp.getPropertyValue('--width')) || 0;
   progress_bar.style.setProperty('--width',width + .2)
-},2)
+},1)
 document.addEventListener("DOMContentLoaded", function () {
     let eel = document.getElementsByClassName("parallax");
     let xValue = 0, yValue = 0;
