@@ -1,9 +1,6 @@
-<?php
-session_start();
 
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-scroll" >
 
 <head>
     <meta charset="UTF-8">
@@ -11,41 +8,65 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <link rel="stylesheet" href="./sidebar.css">
-    <title>Document</title>
+    <link rel="icon" href="Web_capture_13-5-2023_03853_www.univ-blida.dz-removebg-preview.png" type="image/icon type">
+ 
+  
+  
+    <title>LRDSI</title>
 
 </head>
 
 <body>
-
-
+<div class="ch" id="ch" >
+<div  class="split-screen">
+  <img class="img2" src="Group 281.png">
+        <div class="div1">
+        <i onclick="togglech()"  class="fa-solid fa-x fa-xl" style="color:#79B3A9;padding:30px;cursor:pointer"></i>
+          <div class="ConUser">  <img style="max-width:400px" class="img1" src="Rectangle 50.png">
+            <button class="btn1">presentation</button></div>
+            
+        </div>
+        <div class="div2">
+          <div class="ConAdmin">
+            <p class="p1">En tant qu'administrateur,</p>
+            <p class="p2">ADMIN</p>
+            <p class="p3">Vous pouvez ajouter, supprimer et mettre à jour certaines choses, vous avez un accès complet à la gestion des informations sur cette page</p>
+            <button class="btn2">gestion</button></div>
+        </div>
+    </div></div>
+<div class="cin-container" style="position: absolute;background-color:white;z-index:100000000000;width:100vw;height:100vh"><div style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999999999999">
+<img src="Rectangle 39 (1).png" alt="loading pc" >
+<div class="progress-bar" style="--width:2" data-label="louding..."></div>
+<center><h1>loading...</h1></center></div>
+<div  class="cin parallax" data-speedX="0.02" data-speedY="0.015"></div></div>
    
-    <div id="acl" class="container">
+    <div id="acl" class="container"  style="position: relative;">
+<els >
 
+<img id="e1" src="el1.png"class="parallax" alt="cloud"  data-speedX="0.015" data-speedY="0.01"><img id="e2" src="el2.png"class="parallax"  data-speedX="0.04"  data-speedY="0.03" alt="cloud" ><img id="e4" class="parallax" src="el4.png" alt="CLOUD" data-speedX="0.025"  data-speedY="0.015">
 
-        <div class="item1">
-            <div style="z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000;" class="itemb1">
-                <h1><img style="max-width: 30px;" src="Web capture_13-5-2023_03853_www.univ-blida.dz.jpeg" alt=""><i>LRDSI</i></h1>
+</els>
+
+        <div id="main-section" class="item1">
+            <div style="z-index: 100000000;" class="itemb1">
+                <h1><img style="max-width: 30px;" src="Web_capture_13-5-2023_03853_www.univ-blida.dz-removebg-preview.png"   data-speedX="0.02" alt="logo"><i>LRDSI</i></h1>
             </div>
-            <div class="itemb2"><a href="#">presentation</a>
-                <a href="#">membres</a>
-                <a href="#projects">projects</a>
+            <div class="itemb2"><a href="presentation.php#about">Presentation</a>
+                <a href="memberpage.php#intec">Membres</a>
+                <a style="cursor: pointer;" onclick="togglesubmenu()">Plus<i class="fa-solid fa-circle-chevron-down"></i></a>
+                <ul><li><a href="recherchepage.php"> Recherche </a></li><ul><li><a href="">Equipes</a> </li>
+                <li><a href="Rprojet.php"> Projets</a></li>
+                <li><a href="Rpublication.php"> Publication</a></li></ul>
+                <li><a href="formation.php"> Formation</a></li>
+                <li><a href="#contact">Contact</a> </li></ul>
             </div>
-            <div class="itemb3">
-             
-            </div>
-            <div class="itemb4"><img style="max-width: 30px; visibility:hidden" src="🦆 icon _globe alt_.png" alt=""></div>
+         
+           
             <div class="itemb5">
                 <hr>
-                <script>var viewportWidth = window.innerWidth;
-
-                if (viewportWidth < 656) {
-    document.write('<h1 style="margin-left: 19px;">Laboratoire de Recherche<hr> <span style="opacity: 0.6;" id="element"></span></h1>');
-} else {
-    document.write('<h1 style="margin-left: 19px;">Laboratoire de Recherche <span style="opacity: 0.6;" id="element"></span></h1>');
-}</script>
+                <h1 style="margin-left: 19px;">Laboratoire de Recherche<hr> <span style="opacity: 0.6;" id="element"></span></h1>
                 <hr>
-                <h1 style="margin-left: 19px;">Faculté des Sciences | Université Saad Dahlab - Blida 1
+                <h1 style="margin-left: 19px;">Faculté des Sciences | USDB
                 </h1>
                 <h1>
                 </h1>
@@ -56,32 +77,31 @@ session_start();
 
         <div class="item2">
             <div class="su">
-                <h1 style="
-                font-weight:400;font-size:70px;text-transform:capitalize;font-family:Arial, Helvetica, sans-serif;color:#000;
-width:1000px;display:block; white-space:normal !important;">   <script>var viewportWidth = window.innerWidth;
-
-if (viewportWidth < 656) {
-document.write('Introducing <br> LRDSI');
-} else {
-document.write('Introducing LRDSI');
-}</script></h1>
+           <script>const viewportWidth =window.innerWidth;
 
 
+</script>
+
+<br><br><br><br><br><br>
 
     <!-- Footer -->
-    <footer>
+    <element>
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <div  class="social-links">
                     
-                        </a>  <a style="width:200px" class="social-btn" href="#">
-                           <span>Get Started</span>
-                        </a>
+                
+                     
+                         <a onclick="togglech()">  <a href="#top"  onclick="togglech()" style="width:200px;cursor: pointer;" class="social-btn "  data-speedX="0.02" >
+                          <span>Commencer</span></a>
+                       
+                      
+                        
+
+
                       <br>
-                        <a style="width:200px;background:#f4f4f4;color:#000" class="social-btn" href="LOGIN.html">
-                            <span>Learn more</span>
-                        </a>
+                       
 
                      
                     </div>
@@ -91,16 +111,16 @@ document.write('Introducing LRDSI');
                 </div>
             </div>
         </div>
-    </footer>
+    </element>
             </div>
         </div>
-        <div class="item3"><img class="imgg" style="max-width:40%;max-height:550px;position:absolute;top:6%;right:5%;"
+        <div class="item3"><img class="imgg " style="max-width:40%;max-height:550px;position:absolute;top:17%;right:9%;"  data-speedX="0.02"
            src="Group 241 (4).png" alt="group photo"></div>    <!--  -->
 <img
-            style="position: absolute;top:-1%;right:6%;z-index:-11111111" src="Group 242.png">
+            style="position: absolute;top:-1%;right:6%;z-index:-11111111;opacity: 0.3;" src="Group 242.png" class=" backimg"  data-speedX="0.02">
     </div>
-    <div class="navigation">
-    <ul>
+    <div class="navigation unvisibale">
+    <ul style="margin-top: 40px;">
       <li id="home" onclick="togglehome()">
         <a href="#">
           <span class="icon"><i class="fa-solid fa-house"></i></span>
@@ -114,36 +134,63 @@ document.write('Introducing LRDSI');
           <span class="title">Profile</span>
         </a>
       </li>
-      <li onclick="toggleinfoMessages()">
-        <a href="#">
-          <span class="icon"><i class="fa-solid fa-message"></i></span>
-          <span class="title">Messages</span>
-        </a>
-      </li>
+
+<li onclick="toggleinfoMessages()">
+        <a href="#">';
+         <span class="icon"><i class="fa-solid fa-message"></i></span>
+         <span class="title">Messages</span>
+      </a>
+     </li>
+
       <li id="infoUsdb" onclick="toggleinfoUsdb()">
         <a href="#">
-          <span class="icon"><i  class="fa-solid fa-circle-info"></i></span>
+          <span class="icon"><i class="fa-solid fa-building-columns"></i></span>
           <span class="title">USDB</span>
         </a>
       </li>
       <li id="infoLrdsi" onclick="toggleinfoLrdsi()">
         <a href="#">
           <span class="icon"><i  class="fa-solid fa-circle-info"></i></span>
-          <span class="title">LRDSI</span>
+          <span class="title">FAQ</span>
         </a>
       </li>
-     
-      <li onclick="signout()">
+    
+<li onclick="signout()">
+        <a href="#">';
+                    <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+
+
+                  <span class="title">SignOut</span>
+
+
+        </a>
+     </li>
+
+      
+      <li id="mode" onclick="toggleMode()">
         <a href="#">
-          <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
-          <span class="title">SignOut</span>
+          <span class="icon"><i class="fa-solid fa-circle-half-stroke"></i></span>
+          <span class="title">Dark mode</span>
         </a>
-      </li>
+      </li>   
+      
     </ul>
   </div>
 
   <div class="toggle" onclick="toggleMenu()"></div>
   <script type="text/javascript">
+  function togglesearch() {
+  const icon = document.querySelector(".icon");
+const search = document.querySelector(".search");
+	search.classList.toggle("icon_active");
+};
+function togglech() {
+let ch=document.querySelector(".ch");
+ch.classList.toggle("active");
+let html=document.querySelector("html");
+      html.classList.toggle('no-scroll');
+}
+
   function signout(){
     window.location.href = 'deconnexion.php';
   }
@@ -160,12 +207,23 @@ function login(){
     navigation.classList.remove('active');
     body2.classList.remove('active');
     let toggle = document.querySelector('.toggle');
-      
-   
+          let itemb2 = document.querySelector('.itemb2');
+          itemb2.classList.remove('active');
+    let msg =document.querySelector('.messages')
+    msg.classList.remove('active');
+
       toggle.classList.remove('active');
   
   }
+  function togglesubmenu(){
+   let menu = document.querySelector(".itemb2 > ul");
+   menu.classList.toggle('active'); 
+   
+  }
   function toggleinfoLrdsi(){
+    let itemb2 = document.querySelector('.itemb2');
+          itemb2.classList.remove('active');
+   
     let html=document.querySelector('html');
     let body2 = document.querySelector('.body.Lrdsi');
    
@@ -176,7 +234,8 @@ function login(){
     body.classList.remove('active');
     let toggle = document.querySelector('.toggle');
       
-   
+    let msg =document.querySelector('.messages')
+    msg.classList.remove('active');
       toggle.classList.remove('active');
   }
   
@@ -189,16 +248,20 @@ function login(){
     let navigation = document.querySelector('.navigation');
     navigation.classList.remove('active');
     let toggle = document.querySelector('.toggle');
-      
-   
+    let itemb2 = document.querySelector('.itemb2');
+          itemb2.classList.remove('active');
+    let msg =document.querySelector('.messages')
+    msg.classList.remove('active');
       toggle.classList.remove('active');
   
       
   }
+ 
     function toggleMenu() {
       let navigation = document.querySelector('.navigation');
       let toggle = document.querySelector('.toggle');
-      
+      let haz=document.querySelector('html');
+    haz.classList.toggle("no-scroll");
       let itemb2 = document.querySelector('.itemb2');
       navigation.classList.toggle('active');
       toggle.classList.toggle('active');
@@ -216,13 +279,27 @@ function login(){
     body.classList.remove('active');
     let toggle = document.querySelector('.toggle');
       
-   
+    let itemb2 = document.querySelector('.itemb2');
+          itemb2.classList.remove('active');
       toggle.classList.remove('active');
   
   }
-   
-  </script>
+  function toggleMode() {
+  let elements = document.querySelectorAll('body, .container, .thed.pd-y, .navigation, .itemb2 a, h1, li span,footer,.contact,.skil');
 
+  elements.forEach(element => {
+    element.classList.toggle('dark')
+    // Add additional style changes for dark mode here
+  });
+
+
+  
+
+
+
+
+}
+  </script>
 
 
     <!-- Load library from the CDN -->
@@ -242,8 +319,8 @@ function login(){
     </div>
    
     <div class="menupage"></div>
-    <div class="squir"></div>
-    <div  class="cin"></div>
+    <div  class="squir "></div>
+    
     <div class="the-hole-seconde-section">
     <div class="background"></div>
     <div class="body">
@@ -251,11 +328,11 @@ function login(){
 
     <section >
   <div style="margin-left: 25px;;margin-top:30px" class="right">
-  <div  class="head"><h1 style="line-height: 30px;font-size:20px">Saad Dahlab University Blida 1 (Université Saad Dahlab Blida 1) .<br> </h1></div>
-    <p> you cen viqit the university page to learn more </p>
+  <div  class="head"><h1 style="line-height: 30px;font-size:20px">Saad Dahlab University Blida 1 .<br> </h1></div>
+    <p>En savoir plus </p>
   <div class="btns">
-    <a href="https://www.univ-blida.dz/"><button class="brutal">visit us</button></a>
-   <a href="#contact"> <button>#contact us ☞</button></a>
+    <a href="https://www.univ-blida.dz/"><button class="brutal">Visitez-nous</button></a>
+   <a href="#contact"> <button>#contact  ☞</button></a>
    </div>
   </div>
   <div class="left">
@@ -266,35 +343,45 @@ function login(){
 <div   class="body Lrdsi">
     <section >
   <div style="margin-left: 25px;margin-top:30px" class="right">
-  <div  ><div style="line-height: 30px;font-size:20px;color:white;max-width:400px;    white-space: pre-line;">Le laboratoire de Recherche pour le Développement des Systèmes Informatisés 
+  <div  ><div style="line-height: 30px;font-size:20px;max-width:400px;    white-space: pre-line;">Le laboratoire de Recherche pour le Développement des Systèmes Informatisés 
   (LRDSI) de l’université Saad Dahlab –Blida1, a été agréé en mai 2002 pour accompagner
    le département d’informatique créé en 1999, dans ses activités pédagogiques et scientifiques.
     Il est composé de quatre équipes regroupant plus de 30 enseignants chercheurs et 32 doctorants (LMD et classique).  
     </div>
     </div>
-    <p> you cen viqit the university page to learn more </p>
-  <div class="btns">
-    <a href="https://www.univ-blida.dz/"><button class="brutal">visit us</button></a>
-   <a href="#contact"> <button>#contact us ☞</button></a>
-   </div>
+  
+
   </div>
   <div class="left">
     <img style="max-height:750px ;" src="Web capture_13-5-2023_03853_www.univ-blida.dz.png">
   </div>
 </section></div>
-<div class="thed pd-y" style="background-color: white;" id="f">
-    <div id="projects"class="projects-title hide-fade"><h2>news</h2></div>
-   <div class="skils" >
-    <div class="skil hide-fade layerf"><a style="z-index: 10000;color:white" href="#">read more</a><img class="img" src="img/Capture d’écran 2022-09-18 191946.png" alt="1stproject"></div><div class="skil hide-fade  layerf"><a style="z-index: 10000;color:white" href="#">read more</a><img class="img" src="img/Web 1920a – 1.jpg" alt="1stproject"></div><div class="skil hide-fade layerf"><a style="z-index: 10000;color:white" href="#">read more</a></div>
+<div class="thed pd-y" style="background-color: #e8f6ef;z-index:10;padding:100px 0 100px 0;width:100vw !important"  id="f">
+    <div id="projects"class="projects-title hide-fade"><h2>NEWS</h2></div>
+   <div class="skils"style="white-space:pre-line;" >
+    <div class="skil hide-fade layerf"><a style="z-index: 10000;color:white" href="#">read more</a> <center><h1>Communications internationales</h1><p>Microarray lung Cancer Data Classification Using Feature selection</p><p>Electrical-Electronics & Biomedical Engineering & Computer Science</p><p>2019</p>
+     
+            
+         
+     
+     
+        </center> </div><div class="skil hide-fade  layerf"><a style="z-index: 10000;color:white" href="#">read more</a> <center><h1>Memoires de magister</h1><p>Conception d'un fragment de gestion des connaissances a base de raisonnement a partir de cas pour la re- modelisation des processus metiers</p><p>Boumahdi Fatima</p><p>06/2008</p>
+        
+               
+    </center> </div><div class="skil hide-fade layerf"><a style="z-index: 10000;color:white" href="#">read more</a>  <center><h1>Theses de doctorat</h1><p>Les entrepots de textes (Tex Warehousing) : Construction et analyse en ligne des cubes textes</p><p>Oukid lamia</p><p>2015</p>
+           
+                  
+               
+       </center> </div><a href="presentation.php#about"><i style="padding-left: 20px;" class="fa-solid fa-angles-right fa-beat-fade fa-2xl"></a></i>
         
         
     </div>
    
 </div></div>
-    
 
   
-<div id="contact" class="contact">
+<div id="contact" class="contact" style="padding-bottom: 50px;"><center><h1>Nous contacter
+</h1></center>
 <form class="my-form" action="index.php" method="post">
   <div class="container">
     
@@ -318,10 +405,7 @@ function login(){
         
 
                
- <label for="terms">I have read and agreed with  <script>viewportWidth 
- if(viewportWidth <500){
-  document.write('<br> <hr>');
- }  </script> <a href="">the terms and conditions.</a>
+ <label for="terms">I have read and agreed with <br> <hr> <a href="">the terms and conditions.</a>
 
         </label>
       </li>  
@@ -348,23 +432,51 @@ function login(){
     </ul>
   </div>
 </form>
+<center >
+<i class="fa-solid fa-phone fa-xl" ></i><p >+ 213 (0)25 27 24 36</p>
+<i class="fa-solid fa-map-location-dot fa-xl" ></i><p style="white-space: pre-line;">
+BP 270, Route de Soumâa 09100 - Blida - Algérie</p>
+<i class="fa-solid fa-envelope-circle-check fa-xl" ></i><p style="margin-bottom:20px">lrdsi@univ-blida.dz</p>
+
+
+</center>
 </div>
-<div class="messages">
+<div class="copyR">
+  
+  <footer style="text-align: center;white-space:pre-line;max-width: 375px;margin-top: 0;margin-bottom:0;margin-right:auto;margin-left:auto;position:absolute;bottom:0"><tt><b> Privesy | Terms of use | Copyrights &copy; <span class="year"></span> LRDSI. all rights reserved</b></tt></footer>
+</div><div  class="messages">
 
 
 
 
 
+<img id="backgroundimg" >
+<div class="main">
+  
 
-<?php
-include("MSG.php");
+  <div class="content">
+    <div style="padding:11px;">
+    
+         <p>2023-05-29 10:14:50</p>
+         from youcef benziane</p>
+           <p>ybenzian016@gmail.com
+     <div class="msg-btn-holder">
+             <div class="receiver-msg msg-btn">
+        <p>the best thing  re hre hf hrth rh tr thrh  tr her   dfgh rt  tr he herh rehrethrehtreh ert herherh z</p><br>
+           </div></div><br><br><br><br><br><br><br><br><br><br><br>
 
-?>
+      </div>
+     
 
+    </div>
+
+  </div>
+  
 
 </div>
 
-<footer style="text-align: center;white-space:pre-line;max-width: 375px;margin-top: 0;margin-bottom:0;margin-right:auto;margin-left:auto"><tt><b> Privesy | Terms of use | Copyrights &copy; <span class="year"></span> LRDSI. all rights reserved</b></tt></footer>
+
+
 
 </body>
 
@@ -401,41 +513,457 @@ window.onload = function() {
     imgg.classList.add('onload');
 }
 var cin = document.querySelector('.cin');
-var vic = document.querySelector('#vic');
-
 var viewportHeight = window.innerHeight;
-var viewportWidth = window.innerWidth;
-vic.style.width = viewportWidth + 'px';
 
-var num_rows = (viewportHeight * 5) / 617;
-var num_points_per_row = (viewportWidth * 15) / 1366;
-
+var num_rows = Math.floor((viewportHeight * 17) / 667);
+var num_points_per_row = Math.floor((viewportWidth * 25) / 1366);
+let color=true;
 for (var i = 0; i < num_rows; i++) {
-    var row = document.createElement('div');
-    row.style.marginTop = i + 'px';
+  var row = document.createElement('div');
+  row.style.marginTop = i + 'px';
 
-    for (var j = 0; j < num_points_per_row; j++) {
-        var point = document.createElement('span');
-        point.classList.add('point');
-        row.appendChild(point);
-    }
+  for (var j = 0; j < num_points_per_row; j++) {
+    var point = document.createElement('span');
+   if(color==true){
+    point.style.backgroundColor='#A8912A';
+    color=false;
+   }else{
+    point.style.backgroundColor='#E8735F';
+    color=true;
+   }
+    point.classList.add('point');
+    row.appendChild(point);
+  }
 
-    cin.appendChild(row);
-    var linkElement = document.querySelector('.link');
-    var tg = true;
-    var menuPageElement = document.querySelector('.menupage');
-    linkElement.addEventListener('mouseover', function() {
-        if (tg == true) {
-
-            menuPageElement.classList.add('vv');
-        } else {
-            menuPageElement.classList.remove('vv');
-
-        }
-    });
+  cin.appendChild(row);
 }
 </script>
+
+<?php
+
+include("database.php");
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["text"])) {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $text = $_POST["text"];
+
+        $sql = "INSERT INTO `MSG` (`name`, `email`, `text`) VALUES ('$name', '$email', '$text')";
+        if (!mysqli_query($conn, $sql)) {
+            
+        
+            echo "Error inserting data: " . mysqli_error($conn);
+        
+
+        }
+    } else {
+        echo "Invalid data submitted.";
+    }
+  
+}
+mysqli_close($conn);
+
+?>
 <style>
+.ch{
+  z-index: 100000000000000000000000000000000000000000000000000000000000000000;
+            position: absolute;
+            top: 0%;
+          
+            left: 0%;
+            width: 100vw;
+            height: 100vh;
+            font-family: "BraahOne" !important;
+           
+}
+        .split-screen{
+          display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    grid-template-areas:
+        "div1 div2 "
+        
+
+
+        }
+        @media (max-width:860px) {
+          .p3{
+            font-size: 8px !important;
+            max-width: 280px;
+          }
+          .btn2{
+            margin-top: 165px !important;
+          }          
+        }       
+        
+
+        @media (max-width: 760px){
+            .split-screen{
+              grid-template-columns: 1fr ;
+    grid-template-rows: 2;
+    grid-template-areas:
+        "div1 "
+        "div2 "
+            }
+           
+            .div1{
+              max-height: 50vh !important;background: linear-gradient(-90deg,#f5f5f5,#d0e1e0,#8fbfb7) !important;
+            }.div2{
+              max-height: 50vh !important;
+            }
+            img.img2{
+              max-width: 80px !important;
+              max-height: 80px !important;
+            }
+            img.img1{
+           margin-top: 120px;
+           max-width: 200px !important;
+         
+       }
+       .ConAdmin{
+        top: 125% !important;
+       }
+
+       .btn1{
+        margin-top: 20px !important;
+        max-width: 90px;font-size: 7px !important;
+       }
+
+       .btn2{
+        margin-top: 15px !important;
+        max-width: 120px !important;
+        max-height: 70px !important;
+        font-size: 9px !important;
+       }
+       .ch i{
+        color: white !important;
+       }
+        }
+        .split-screen div{
+            flex: 1;
+            height: 100vh;
+        }
+        .div1{
+          grid-area: div1;
+
+            height: 100vh;
+            background: linear-gradient(180deg,#f5f5f5,#d0e1e0,#8fbfb7) ;position: relative;
+                   
+        }
+        
+        .img1{
+           
+         
+            max-width: 200 px;
+          
+        }
+        .img2{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 50%;
+            top: 50%;
+            z-index: 999999999999999999999999;
+            transform: translate(-50%,-50%);
+        }
+        .ConUser{
+          position: absolute;
+          top:80%;
+left:50%;
+white-space: pre-line;
+transform: translate(-50%,-50%);
+
+        }
+        .ConAdmin{
+          position: absolute;
+top:80%;
+left:50%;
+transform: translate(-50%,-50%);
+
+        }
+        .btn1{
+          white-space: pre-line;
+            background-color: transparent;
+            box-sizing: border-box;
+            width: 259px;
+            height: 70px;
+          margin-top: 85px;
+          margin-left: 60px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.275em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+            cursor: pointer;
+            border: 2px solid #FCFCFC;
+        }
+        .div2{
+          position: relative;
+            text-align: center;
+            height: 100vh;
+            background-color: #8fbfb7;
+            grid-area: div2;
+
+        }
+        body{
+         overflow-x:scroll
+        }
+        .p1{
+
+            font-size: 12px;
+        
+            letter-spacing: 0.345em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+
+        }
+        .skil.dark{
+          background-color: white !important;
+          color: #000 !important;
+        }
+        .skil.dark h1{
+          background-color: white !important;
+          color: #000 !important;
+        }
+        .head h1{
+          background-color: transparent !important;
+          color: #000 !important;
+        }
+       ul  a.dark{
+          background-color: transparent !important;
+          color: #000 !important;
+        }
+        .contact span.dark{
+          background-color: transparent !important;
+          color: #000 !important;
+        }
+        .ch p{
+          white-space: pre-line;     font-family: 'oxaniumbold';
+            font-style: normal;
+            font-weight: 900;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .p2{
+            position: relative;
+     
+
+         
+            font-size: 64px;
+            line-height: 77px;
+            letter-spacing: 0.275em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+
+        }
+        .p3{
+        
+            width: 414px;
+            
+          
+            font-size: 12px;
+           
+            text-align: center;
+            letter-spacing: 0.345em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+        }
+        .btn2{
+          white-space: pre-line;
+            background-color: transparent;
+            box-sizing: border-box;
+
+           margin-top: 140px;
+            width: 259px;
+            height: 70px;
+        
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.275em;
+            text-transform: uppercase;
+
+            color: #FCFCFC;
+            cursor: pointer;
+            border: 2px solid #FCFCFC;
+        }
+        button:hover{
+            background-color: #FCFCFC;
+            color: #8fbfb7;
+        }
+.progress-bar{
+  width: 201px ;
+  height: 13px; border-radius: 6.5px;
+  margin-top: 5px;
+  background-color: #A7D3DE;
+ 
+  position: relative;
+}
+*::after,*::before{
+  box-sizing: border-box;
+}
+.progress-bar::after{
+  content: "";
+  background-color: #EE6052;
+   height: 13px; border-radius: 6.5px;
+border-radius: 6.5px;
+  z-index: 99999999999;
+  min-width: 2em;
+  max-width: 201px;
+  width: calc(var(--width,0)*1%);
+position: absolute;
+
+}
+#e1{
+  top:calc(50% + 260px);
+  max-width: 200px;
+  z-index: 1;
+}
+#e2{
+  top:calc(50% + 260px);
+  max-width: 250px;
+  left:calc(50% - 600px );
+}
+#e4{
+  top:calc(50% + 260px);
+  max-width: 500px;
+  left:calc(50% + 50px );
+  
+}
+
+els img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  z-index:-2;
+
+}
+footer{
+  
+ 
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@font-face {
+  font-family: "CastoroTitling";
+  src: url("https://s3.us-east-2.amazonaws.com/cdn.spotlessplace.com/wp-content/CastoroTitling-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: BraahOne;
+  src: url("https://s3.us-east-2.amazonaws.com/cdn.spotlessplace.com/wp-content/Merriweather-Regular.ttf");
+}
+.messages{
+  background-color: transparent !important;
+  top: 0 !important;
+  left: 0 !important;
+  transition: width 1s !important;
+}
+::selection{
+  color: white;
+  background-color: #0aaf60;
+}
+.messages #backgroundimg {
+  object-fit: cover;
+  object-position: center center;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(0 0% 100% / 0.1);
+ 
+    backdrop-filter: blur(0.8rem);
+  
+  z-index: -1;
+  animation: zoom 20s infinite alternate;
+}
+
+.messages .main {
+  background-color:white;
+  aspect-ratio: 13/16;
+  width: 400px;
+  position: absolute;
+  white-space: pre-line;
+  word-wrap: break-word;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: transform 1s ease, width 1s ease;
+}
+.messages .main:hover {
+  width: 410px;
+}
+
+.no-scroll {
+   overflow: hidden !important;
+}
+.messages .content {
+  max-width: 100%;
+ 
+  
+  height: 800px;
+  text-align: center;
+  color: #afafaf;
+
+  overflow: auto;
+}
+html.no-scroll{
+  overflow-y: hidden !important;
+}
+.messages .msg-btn {
+  color: #fff;
+  word-wrap: break-word;
+  border-radius: 100px;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  font-family: "BraahOne";
+}
+.messages .msg-btn p {
+  padding: 10px 15px;
+  white-space:pre-wrap;
+  width: 100%;
+  margin: 0;
+}
+.messages .msg-btn-holder {
+  padding-bottom: 30px;
+  width: 100%;
+  margin-top: 60px;
+}
+.messages .receiver-msg {
+  background: #4c4c4c;
+  float: left;
+}
+.messages .sender-msg {
+  background: #2798fc;
+  float: right;
+}
+
+
+.dark {
+  background-color: #292a2b !important;
+  color: white !important;
+}
+
+
 @font-face {
     font-family: 'oxaniumbold';
     src: url('oxanium-bold.woff2') format('woff2'),
@@ -462,6 +990,7 @@ for (var i = 0; i < num_rows; i++) {
     text-align: center;
     font-weight: 200;
     opacity: 0.8;
+    position: relative;
 }
 
 h1,
@@ -478,6 +1007,15 @@ h1,
 
 .itemb2 a:hover,.itemb3 a:hover {
     opacity: 0.5;
+}
+.parralax{
+  position: absolute;
+ 
+}
+.unvisibale{
+  z-index: -10000000000000000000000000000;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
 .itemb1 h1,
@@ -500,9 +1038,7 @@ h1,
     letter-spacing: 2px;
 }
 
-.vv {
-    width: 100vw !important;
-}
+
 
 .menupage {
     transition: all 1s;
@@ -556,7 +1092,15 @@ body{
     transition: color 1s ease-in-out;
 
 }
-
+@media (max-width:1200px) {
+  img.imgg {
+    opacity: 0.3;
+  }
+  
+}
+.parralax{
+  transition: 0.45s cubic-bezier(.2,.94,32,.99);
+}
 .link:hover {
     background-color: #f4f4f4;
     transition: color 1s ease-in-out;
@@ -591,10 +1135,12 @@ html {
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
-
+.no-scroll {
+   overflow-y: hidden !important;
+}
 body {
     padding-left: 10px !important;
-
+scroll-behavior:smooth ;
     overflow-x: hidden;
     position: relative;
     background-color: #fff;
@@ -605,7 +1151,7 @@ html{
   
 }
 .container {
-    width: 100vw;
+  
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -618,6 +1164,10 @@ html{
         "left left right right"
         "left left right right"
 
+}
+body{
+  max-height: 600vh;
+  overflow-y: hidden;
 }
 
 .itemb1 {
@@ -658,7 +1208,7 @@ html{
 .inputLink .button2 {
     width: 190px;
     height: 55px;
-color:#0aaf60 !important ; 
+color:#0aaf60 ; 
 border: #0aaf60 solid 2px;
    border-radius: 10;
    background-color: #f4f4f4;
@@ -697,12 +1247,12 @@ border: #0aaf60 solid 2px;
 
 
 }
-
-;
-
-.glob {
-    grid-area: globglob;
+.ch{
+  
+  visibility: hidden;
+  opacity: 0;
 }
+
 
 .item2 .su {
     grid-area: leftL;
@@ -727,11 +1277,15 @@ border: #0aaf60 solid 2px;
 ;
 
 .cin {
+  z-index: 100000000000;
+ 
     width: 100vw;
     height: 100vh;
-    position: absolute !important;
-    top: 50%;
-    left: 50%;
+    background-color: white;
+    position: absolute ;
+    top: 0 !important;
+    left: 0;
+    
 }
 
 .point {
@@ -743,7 +1297,9 @@ border: #0aaf60 solid 2px;
     background-color: black;
     margin-right: 50px;
     border-radius: 50%;
+    
 }
+
 
 .lang {
     grid-area: lang;
@@ -788,7 +1344,7 @@ margin: 20px;
     min-width: 0 ;
     min-height: 0;
     
-    
+    background-color: #fff;
     
     
 }
@@ -861,7 +1417,7 @@ margin: 20px;
     width: 0%;
     height:0%;
     color:#fff;
-    background-color: black !important;
+    background-color: black;
     z-index: -1;
     
 }
@@ -869,7 +1425,7 @@ margin: 20px;
     top:0;left: 0;
     width: 100%;
     position: absolute;
-    background-color: #5d92fe !important;
+    background-color: #5d92fe ;
     z-index: 2;
     opacity: 0.8;
     transition: width 0.5s,height 0.5s;
@@ -924,11 +1480,15 @@ margin: 20px;
     transition: opacity 0.5s,visibility 0.5s,top 0.5s;
     
 }
+.ch.active{
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 .thed .skil:hover  a{
     opacity: 1;visibility: visible;top:50%;
 }
 
-footer .social-btn {
+element .social-btn {
 
     vertical-align:middle ;
     text-align: center;
@@ -944,16 +1504,16 @@ footer .social-btn {
     position: relative;
     border: 1px dotted #fff;
 }
-footer .social-btn  span{
+element .social-btn  span{
     font-size: 22px;
     transition: 0.2s linear;
 }
-footer .social-btn:hover  span {
-    transform: scale(1.2) !important;
-    color: #C8102E !important;
+element .social-btn:hover  span {
+    transform: scale(1.2) ;
+    color: #C8102E ;
   
 }
-footer .social-btn::before {
+element .social-btn::before {
     content: "";
     position: absolute;
     width: 150%;
@@ -963,7 +1523,7 @@ footer .social-btn::before {
     left: -110%;
     top: 90%;
 }
-footer .social-btn:hover::before {
+element .social-btn:hover::before {
     animation: effect 0.6s 1;
     top: -10%;
     left: -10%;
@@ -993,7 +1553,7 @@ height: 30px;
   cursor: pointer;
 }
 
-/*-- Hover Animation Effect --*/
+
 @keyframes effect {
     0% {
         left: -120%;
@@ -1022,12 +1582,12 @@ a{
 
 }
 @media (max-width: 576px){
-footer .social-btn {
+element .social-btn {
     width: 40px;
     height: 40px;
     margin: 5px;
 }
-footer .social-btn span {
+element .social-btn span {
     font-size: 18px;
 }
 }
@@ -1038,7 +1598,7 @@ footer .social-btn span {
 }
  .body {
 	 font-family: sans-serif;
-	 background-color: #fed4fd;
+	 background-color: #E8F6EF;
 }
  .body section {
 	 width: 100vw;
@@ -1184,17 +1744,6 @@ footer .social-btn span {
    
 }
 
-@keyframes wonderfull{
-    from { margin-top: 0; }
-    50%  { margin-top: -10px;  } /* ignorée */
-    to   { margin-top: 0;  }
-}
-.pricing .skil .last-pixle-character{
-    position: absolute;
-   transform: scale(60%) translate(-50%,-70%);
-   
-    
-}
 
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
@@ -1239,7 +1788,7 @@ select::-ms-expand {
 
 select:-moz-focusring {
   color: transparent !important;
-  text-shadow: 0 0 0 var(--white);
+  text-shadow: 0 0 0 black;
 }
 
 .contact textarea {
@@ -1252,8 +1801,8 @@ select:-moz-focusring {
 
 .contact {
   font: 18px/1.5 "Open Sans", sans-serif;
-  background: var(--bodyColor);
-  color: var(--white);
+  background: white;
+  color: black;
   margin: 1.5rem 0;
 }
 
@@ -1286,8 +1835,8 @@ select:-moz-focusring {
   line-height: 1.5;
   padding: 15px 10px;
   border: 1px solid var(--borderFormEls);
-  color: var(--white);
-  background: var(--bgFormEls);
+  color: black;
+  background: white;
   transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
     transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
@@ -1306,8 +1855,7 @@ select:-moz-focusring {
 .my-form input:focus,
 .my-form textarea:focus,
 .my-form button:enabled:hover,
-.my-form button:focus,
-.my-form input[type="checkbox"]:focus + label {
+.my-form button:focus:focus + label {
   background: var(--bgFormElsFocus);
 }
 
@@ -1324,13 +1872,7 @@ select:-moz-focusring {
   background-size: 15px 15px;
 }
 
-.my-form *:required {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);  
-}
 
-.my-form select {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
-}
 
 .my-form *:disabled {
   cursor: default;
@@ -1338,8 +1880,6 @@ select:-moz-focusring {
 }
 
 
-/* FORM BTNS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .my-form .required-msg {
   display: none;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
@@ -1424,21 +1964,6 @@ select:-moz-focusring {
 }
 
 
-/* FOOTER
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.contact footer {
-  font-size: 1rem;
-  text-align: right;
-  backface-visibility: hidden;
-}
-
-.contact footer a {
-  text-decoration: none;
-}
-
-.contact footer span {
-  color: var(--red);
-}
 
 
 /* MQ
@@ -1508,7 +2033,7 @@ select:-moz-focusring {
 
 .navigation ul li {
   position: relative;
-  width: 100%;
+  width: 120%;
   list-style: none;
   transition: 1s;
 }
@@ -1525,7 +2050,12 @@ select:-moz-focusring {
   text-decoration: none;
   color: #000000;
 }
-
+@media (max-width:400px) {
+ #element{
+font-size: 8px !important;
+  }
+  
+}
 .navigation ul li a .icon {
   position: relative;
   display: block;
@@ -1562,7 +2092,7 @@ select:-moz-focusring {
   background: #074848;
   cursor: pointer;
   transition: 0.7s;
-  z-index: 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+  z-index: 10000;
 }
 
 .toggle.active {
@@ -1586,6 +2116,7 @@ select:-moz-focusring {
 }
 
 @media (max-width: 767px) {
+
   .navigation {
     left: -60px;
   }
@@ -1612,6 +2143,7 @@ select:-moz-focusring {
   .imgg{
     max-width: 50% !important;z-index: -1000000000;
   }
+  
 }
   @media (max-width: 773px) {
   .left {
@@ -1648,14 +2180,31 @@ select:-moz-focusring {
   html{
    height: 100%;
   }
-  @media (max-width: 546px) {
+  @media (max-width: 640px) {
   input,select,textarea{
     width: 50% !important;
   }
+  .Lrdsi .right{
+    font-size: 10px !important;
+  }
   .itemb2{
     visibility: hidden;
-    position: absolute;
-    top:600px;
+    margin-top: 60px;
+    margin-left: -70px;
+position: absolute;
+font-size: 10px !important;
+
+
+  }
+  .itemb2 a{
+    font-size: 10px !important;
+
+  }
+  .itemb2 ul{
+    margin-left: -60px;
+  }
+  .navigation ul{
+    padding-top: 50px !important;
   }
   
 }
@@ -1699,14 +2248,12 @@ section{
   width: 0 ;
   opacity: 0;
   visibility: hidden;
-  transition: all 1s;
+  transition: width 1s;
 
 }
-.messages{
-  left: 4% !important;
-  
  
-}
+ 
+
 
 .body.active,.messages.active{
   width: 100vw !important;
@@ -1714,64 +2261,129 @@ section{
   opacity: 1;
   
 }
-.messages{
-  top: 20px !important;
-  background-color: white;
-  height: 100vh;
   
   
-}
-.body.Lrdsi{
-  background-color: #5d92fe;
-}
+
+
+
+
 form button{
   width: 100px !important;
 }
-HTML CSSResult Skip Results Iframe
-
-.bstext{color:#FFF;margin-bottom:15px;border-radius:3px;padding:10px}
-
-.bserror{background-color: #efffff;}
-.headertext{font-size:16px;background-color:rgba(0,0,0,0.30);padding:8px 10px;margin:-10px;margin-bottom:10px}
-.headertext > .fa{margin-right:5px}
-.bloggerspice {overflow: hidden;}
-
 
 
 
 .imgg {
-  perspective: 1000px; /* Set the perspective for 3D effect */
-  transition: transform 0.5s; /* Add transition for smooth animation */
+  perspective: 1000px; 
+  transition: transform 0.5s; 
 }
 
-.imgg:hover {
-  transform: rotateY(-45deg); /* Rotate the image on hover */
+
+
+
+.itemb3{
+  margin-left: calc(50% +100px);
+}
+
+.search.icon_active {
+	width: 360px;
+}
+.itemb2.active{
+  visibility: visible !important;
+  opacity: 1;
+  z-index: 1000000000000000000000;
+}
+
+
+.itemb2 li{
+padding: 20px;
+padding-left: 0;
+position: relative;
+font-family: 'oxaniumbold';
+}
+.itemb2 >ul.active{
+  visibility: visible;
+  opacity: 1;
+}
+.itemb2{
+  z-index: 9;
+
+}
+.itemb2 > ul{
+
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  position: absolute;
+ left:calc(50% + 80px);
+ 
+ background-color: white;
+ list-style: none;
+}
+::placeholder{
+  opacity: 0.5 !important;
+}
+.copyR{
+  width: 100vw !important;
+ height: 40px;
+ border-top:1px solid ;
+
+}
+footer{
+  min-width: 100vw !important;
+  margin-bottom: 10px !important;
 }
 </style>
+<script type="text/javascript">
+(function(){
+   function onReady() {
+     setTimeout(function() {
+       let navigation=document.querySelector(".navigation");
+       navigation.classList.remove("unvisibale");
+       let cin =document.querySelector(".cin")
+       cin.classList.add("unvisibale");
+       let html=document.querySelector("html");
+      html.classList.remove('no-scroll');
+      let point =document.querySelector(".point")
+      point.classList.add("pointvansish")
+      let cin_container =document.querySelector(".cin-container")
+      cin_container.classList.add("unvisibale");
 
-<?php
-
-include("database.php");
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["text"])) {
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $text = $_POST["text"];
-
-        $sql = "INSERT INTO `MSG` (`name`, `email`, `text`) VALUES ('$name', '$email', '$text')";
-        if (!mysqli_query($conn, $sql)) {
-            
-        
-            echo "Error inserting data: " . mysqli_error($conn);
-        
-
-        }
-    } else {
-        echo "Invalid data submitted.";
-    }
+     }, 1000); 
+   }
+   
+   if ( document.readyState === 'complete' ) {
+      onReady();
+   } else {
+      document.addEventListener('DOMContentLoaded', onReady);
+   }
+})();
+let progress_bar = document.getElementsByClassName('progress-bar')[0];
+setInterval(()=>{
+  const comp =getComputedStyle(progress_bar);
+  const width =parseFloat(comp.getPropertyValue('--width')) || 0;
+  progress_bar.style.setProperty('--width',width + .2)
+},1)
+document.addEventListener("DOMContentLoaded", function () {
+    let eel = document.getElementsByClassName("parallax");
+    let xValue = 0, yValue = 0;
   
-}
-mysqli_close($conn);
+    window.addEventListener("mousemove", (event) => {
+      xValue = event.clientX - window.innerWidth / 2;
+      yValue = event.clientY - window.innerHeight / 2;
+  
+    
+  
+      Array.from(eel).forEach((e) => {
+        let speedX = e.getAttribute('data-speedX');
+        let speedY = e.getAttribute('data-speedX');
 
-?>
+
+        e.style.transform = `  translateX(calc( ${-xValue * speedX }px )) translateY(calc( ${yValue * speedY}px ))  `;
+      });
+    });
+  });
+  window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+</script>

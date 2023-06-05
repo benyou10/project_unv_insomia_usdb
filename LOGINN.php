@@ -173,8 +173,7 @@
             <p>LRDSI</p><br>
             <input type="text" name="username" placeholder="username" class="email" id="email" required><br><br>
             <input type="password" name="password" placeholder="Password" class="password" id="password" required style="margin-bottom: 10px;"><br>
-            <input class="checkbox" type="checkbox" required> <label for="" class="check">Reminds Me</label>
-            <a href="#" >Password Recovery</a><br><br>
+          
             <input type="submit" value="LOG IN" class="login">
             </form>
         </div>
